@@ -76,8 +76,8 @@ public class RidesAndFaresSolution {
         // Create the pipeline.
         rides.connect(fares)
                 .flatMap(new EnrichmentFunction())
-                .uid("enrichment") // uid for this operator's state
-                .name("enrichment") // name for this operator in the web UI
+                //.uid("enrichment") // uid for this operator's state
+                //.name("enrichment") // name for this operator in the web UI
                 .addSink(sink);
 
         // Execute the pipeline and return the result.
